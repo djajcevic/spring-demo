@@ -40,6 +40,6 @@ jobs:
 
       - name: Push Docker image to internal registry
         run: |
-          docker tag djajcevic/spring-demo:${{ github.sha }} latest
+          docker tag djajcevic/spring-demo:${{ github.sha }} djajcevic/spring-demo:latest
           docker push djajcevic/spring-demo:${{ github.sha }}
           docker push djajcevic/spring-demo
