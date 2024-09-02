@@ -23,7 +23,7 @@ jobs:
           java-version-file: .java-version
 
       - name: Build with Maven
-        run: chmod +x ./mvnw && ./mvnw clean package
+        run: chmod +x ./mvnw && ./mvnw clean package -P ci -DfinalName=app
 
       - name: Log in to Docker Hub
         env:
